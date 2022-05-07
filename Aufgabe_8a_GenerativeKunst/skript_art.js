@@ -20,7 +20,6 @@ var L08_1_GenerativeKunst;
             drawingcircle(randomnumber1, randomnumber2);
             drawingline(randomnumber1, randomnumber2);
             drawingtriangle(randomnumber1, randomnumber2);
-            drawingbubble(randomnumber1, randomnumber2);
         }
     }
     function drawingcircle(_randomnumber1, _randomnumber2) {
@@ -41,8 +40,8 @@ var L08_1_GenerativeKunst;
         saturation = Math.round(Math.random() * 140);
         lightness = Math.round(Math.random() * 120);
         crc2.beginPath();
-        crc2.lineTo(_randomnumber1 + 400, _randomnumber2 + 30);
-        crc2.lineTo(_randomnumber1, _randomnumber2 + 400);
+        crc2.lineTo(_randomnumber1 + 150, _randomnumber2 + 15);
+        crc2.lineTo(_randomnumber1, _randomnumber2 + 250);
         crc2.strokeStyle = "hsl(" + color + "," + saturation + "% , " + lightness + "%" + ")";
         crc2.closePath();
         crc2.lineWidth = 3;
@@ -59,20 +58,6 @@ var L08_1_GenerativeKunst;
         crc2.closePath();
         crc2.lineWidth = 4;
         crc2.stroke();
-    }
-    function drawingbubble(_randomnumber1, _randomnumber2) {
-        color = Math.round(Math.random() * 500);
-        saturation = Math.round(Math.random() * 90);
-        lightness = Math.round(Math.random() * 100);
-        let radius = Math.floor(Math.random() * 60);
-        _randomnumber1 = Math.random() * 800;
-        _randomnumber1 = Math.random() * 600;
-        crc2.beginPath();
-        crc2.arc(_randomnumber1, _randomnumber2, radius, 0, Math.PI * 2);
-        crc2.strokeStyle = "hsl(" + color + "," + saturation + "% , " + lightness + "%" + ")";
-        crc2.lineWidth = 1.5;
-        crc2.stroke();
-        crc2.closePath();
     }
 })(L08_1_GenerativeKunst || (L08_1_GenerativeKunst = {}));
 //# sourceMappingURL=skript_art.js.map
