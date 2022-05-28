@@ -4,6 +4,7 @@ var Strand;
 (function (Strand) {
     window.addEventListener("load", handleLoad);
     let canvas;
+    let imgData;
     let bigClouds = [];
     let smallClouds = [];
     let shipBackground = [];
@@ -28,6 +29,7 @@ var Strand;
             Birdsflying.speed = (Math.random() + 1) * 0.5;
             flyingBirds.push(Birdsflying);
         }
+        imgData = Strand.crc2.getImageData(0, 0, canvas.width, canvas.height);
         for (let i = 0; i < 10; i++) {
             let oneBigCloud = new Strand.Cloud();
             oneBigCloud.x = Math.random() * Strand.crc2.canvas.width;
@@ -45,6 +47,7 @@ var Strand;
         window.setTimeout(animate, 10);
     }
     function animate() {
+        Strand.crc2.putImageData(imgData, 0, 0);
         for (let i = 0; i < bigClouds.length && i < smallClouds.length; i++) {
             bigClouds[i].moveForward();
             smallClouds[i].moveForward();

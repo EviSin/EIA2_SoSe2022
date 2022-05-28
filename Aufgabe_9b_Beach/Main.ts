@@ -5,6 +5,7 @@ namespace Strand {
 
     export let crc2: CanvasRenderingContext2D;
     let canvas: HTMLCanvasElement;
+    let imgData: ImageData;
 
     let bigClouds: Cloud[] = [];
     let smallClouds: Cloud[] = [];
@@ -36,6 +37,8 @@ namespace Strand {
             flyingBirds.push(Birdsflying); 
         }
 
+        imgData = crc2.getImageData(0, 0, canvas.width, canvas.height);
+
         for (let i: number = 0; i < 10; i++) {
             let oneBigCloud: Cloud = new Cloud();
             oneBigCloud.x = Math.random() * crc2.canvas.width;
@@ -58,6 +61,7 @@ namespace Strand {
 
     function animate(): void {
 
+        crc2.putImageData(imgData, 0, 0);
 
         for (let i: number = 0; i < bigClouds.length && i < smallClouds.length; i++) {
 
