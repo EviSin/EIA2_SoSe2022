@@ -28,7 +28,7 @@ var Strand;
             Strand.crc2.stroke();
         }
         moveForward1() {
-            this.x += this.speed * (+2.5);
+            this.x += this.speed * (+1.5);
         }
     }
     Strand.Ship = Ship;

@@ -2,14 +2,12 @@
 /* In Zusammenarbeit mit Anna-Lena Jörger und Linda Bentz */
 var Strand;
 (function (Strand) {
-    /* Leider die Animation mit den Vögeln nicht gut hinbekommen... */
+    /*Leider die Animation nicht gut hinbekommen...*/
     class Bird {
         x;
         y;
         speed;
         constructor() {
-            this.x = 1000;
-            this.y = 1000;
             this.drawBirds1();
         }
         update() {

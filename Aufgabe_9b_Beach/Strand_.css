@@ -1,4 +1,9 @@
 /* In Zusammenarbeit mit Anna-Lena Jörger und Linda Bentz */
+h1 {
+    color: #1874CD;
+    font-family: sans-serif;
+}
+
 #canvas {
     width: 100%;
 }

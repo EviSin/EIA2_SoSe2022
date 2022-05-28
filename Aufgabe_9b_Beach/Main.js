@@ -23,11 +23,11 @@ var Strand;
             shipBackground.push(shipInTheBackground);
         }
         for (let i = 0; i < 5; i++) {
-            let Birdsflying = new Strand.Bird();
-            Birdsflying.x = Math.random() * Strand.crc2.canvas.width;
-            Birdsflying.y = 50 & 25;
-            Birdsflying.speed = (Math.random() + 1) * 0.5;
-            flyingBirds.push(Birdsflying);
+            let birdsflying = new Strand.Bird();
+            birdsflying.x = Math.random() * Strand.crc2.canvas.width;
+            birdsflying.y = 50 & 25;
+            birdsflying.speed = (Math.random() + 1) * 0.5;
+            flyingBirds.push(birdsflying);
         }
         imgData = Strand.crc2.getImageData(0, 0, canvas.width, canvas.height);
         for (let i = 0; i < 10; i++) {
